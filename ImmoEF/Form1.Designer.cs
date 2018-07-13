@@ -43,22 +43,23 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.liegenschaftBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.hausBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.liegenschaftDataGridView = new System.Windows.Forms.DataGridView();
             this.hausDataGridView = new System.Windows.Forms.DataGridView();
-            this.liegenschaftBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hausBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.liegenschaftBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftBindingNavigator)).BeginInit();
             this.liegenschaftBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hausBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hausDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hausBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +81,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.liegenschaftBindingNavigatorSaveItem});
+            this.liegenschaftBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.liegenschaftBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.liegenschaftBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.liegenschaftBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -88,7 +90,7 @@
             this.liegenschaftBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.liegenschaftBindingNavigator.Name = "liegenschaftBindingNavigator";
             this.liegenschaftBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.liegenschaftBindingNavigator.Size = new System.Drawing.Size(886, 25);
+            this.liegenschaftBindingNavigator.Size = new System.Drawing.Size(1145, 25);
             this.liegenschaftBindingNavigator.TabIndex = 0;
             this.liegenschaftBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -186,11 +188,6 @@
             this.liegenschaftBindingNavigatorSaveItem.Text = "Daten speichern";
             this.liegenschaftBindingNavigatorSaveItem.Click += new System.EventHandler(this.liegenschaftBindingNavigatorSaveItem_Click);
             // 
-            // hausBindingSource
-            // 
-            this.hausBindingSource.DataMember = "Haus";
-            this.hausBindingSource.DataSource = this.liegenschaftBindingSource;
-            // 
             // liegenschaftDataGridView
             // 
             this.liegenschaftDataGridView.AutoGenerateColumns = false;
@@ -219,10 +216,6 @@
             this.hausDataGridView.Name = "hausDataGridView";
             this.hausDataGridView.Size = new System.Drawing.Size(557, 487);
             this.hausDataGridView.TabIndex = 2;
-            // 
-            // liegenschaftBindingSource
-            // 
-            this.liegenschaftBindingSource.DataSource = typeof(ImmoEF.Liegenschaft);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -255,6 +248,15 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Ort";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // hausBindingSource
+            // 
+            this.hausBindingSource.DataMember = "Haus";
+            this.hausBindingSource.DataSource = this.liegenschaftBindingSource;
+            // 
+            // liegenschaftBindingSource
+            // 
+            this.liegenschaftBindingSource.DataSource = typeof(ImmoEF.Liegenschaft);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "LiegenschaftId";
@@ -268,11 +270,21 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Name";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 527);
+            this.ClientSize = new System.Drawing.Size(1145, 636);
             this.Controls.Add(this.hausDataGridView);
             this.Controls.Add(this.liegenschaftDataGridView);
             this.Controls.Add(this.liegenschaftBindingNavigator);
@@ -281,9 +293,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftBindingNavigator)).EndInit();
             this.liegenschaftBindingNavigator.ResumeLayout(false);
             this.liegenschaftBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hausBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hausDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hausBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.liegenschaftBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -317,6 +329,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 
